@@ -21,9 +21,11 @@ public class App {
 		 listacom.insertar("3", "limon");
 		 listacom.insertar("peras");
 		 listacom.insertar("5","tomate");
-		 listacom.insertar("3", "limon");
+		 listacom.insertar("4", "limon");
 		 listacom.insertar("uvas");
 		 listacom.insertar("7","manzana");
+		 listacom.insertar("huevos");
+		 listacom.insertar("2","uvas");
 		 listacom.insertar("huevos");
 		 
 		 listacom.imprimir();

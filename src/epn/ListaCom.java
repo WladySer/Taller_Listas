@@ -9,11 +9,13 @@ public class ListaCom {
 	}
 	
 public void insertar(String a,String b){
+	Nodo aux=null;
 	if (estaVacia()) 
 		inicio = new Nodo(a,b);
 	else
 		if(seRepite(b)){
-			System.out.println("Dato repetido");
+		aux=seRepiteN(b);
+			aux.setStr1(a);
 		}else
 			inicio = new Nodo(a,b,inicio); 
 }
@@ -37,6 +39,16 @@ public boolean seRepite(String a){
 		aux=aux.getSiguiente();
 	}
 	return false;
+}
+public Nodo seRepiteN(String a){
+	Nodo aux=inicio;
+	while(aux!=null){
+		if(aux.getStr2().compareToIgnoreCase(a)==0){
+			return aux;
+		}
+		aux=aux.getSiguiente();
+	}
+	return null;
 }
 
 public void imprimir(){
